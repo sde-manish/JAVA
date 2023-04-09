@@ -1,0 +1,30 @@
+package Array;
+
+public class MaximumLengthOfIdenticalSubArray {
+
+	public static void main(String[] args) {
+			
+		 int arr[]= {1,2,3,4,5,5,5,5,5,2,2,1,1};
+		 
+	
+		 int ML=0;			/* ML-Maximum length */
+		 int CL=1;  		/* CL-Current length */
+		 
+		 for(int i=0;i<arr.length-1;i++) {
+			 
+			 if(arr[i]==arr[i+1]) {
+				 CL=CL+1;
+				 
+			 	}
+			 else {
+				 CL=1;
+			 	}
+			 if(ML<CL){
+				 ML=CL;
+				 
+			 }
+		 }
+
+	}
+
+}

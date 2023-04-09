@@ -1,0 +1,45 @@
+package Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArrangeNumber {
+	 public static void main(String args[]) {
+		 Scanner s=new Scanner(System.in);
+		 
+		 int n=s.nextInt();
+		 int arr[] =new int[n];
+		 for(int i=0;i<n;i++) {
+			 arr[i]=s.nextInt();
+			 System.out.println(Arrays.toString(arr));
+		 }
+		
+		 
+//		 for(int i=0;i<n-1;i++) {
+//			 for(int j=i+1;j<n-1;j++) {
+//			 if(i<j) {
+//				 int temp= arr[i];
+//				 arr[i]=arr[j];
+//				 arr[j]=temp;
+//			 }
+//			}
+//		 }
+		 
+		 
+		 int max=0;
+		 for(int i=0;i<n;i++) {
+			 if(arr[i]==max) {
+				 i++;
+				 continue;
+			 	}
+			 if(arr[i]>max) {
+				 max=arr[i];
+			 }
+			 
+		 }
+		 
+		 
+		 System.out.print( max );
+		 
+	 }
+
+}
